@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Pablo Silva Salazar" />
+		<meta name="description" content="Desarrollador Full stack. Portafolio - Pablo Silva Salazar" />
+		<meta
+			name="keywords"
+			content="Full Stack, Desarrollador web, programador backend"
+		/>
+		<meta name="theme-color" content="#09f" />
+		<!-- Fuente  -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Iconos  -->
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<title>Portafolio</title>
+
+		<!--<link rel="icon" href="assets/img/logo.png" type="image/png" />-->
+		<link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/png" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<script type="module" src="assets/js/main.js"></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init({
+					publicKey: 'cbM4BpeaH1S6TJhM-',   /* !!!!!!!!!!!!!!!!!!!!!!!!!! */
+				});
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header class="header">
+			<nav class="navbar grid--container flex--container">
+				<a class="navbar__logo flex--container" href="#">
+					<i class="bx bxs-registered"></i>Pablo          <!-- !!!!!!!!!!!!!!!!!!!!-->
+				</a>
+
+				<div id="nav" class="navbar__menu">
+					<a href="#close"
+						><i class="bx bx-x btn__close navbar__icon flex--container"></i   
+					></a>                                           <!-- !!!!!!!!!!!!! CLOSE ?!!!!!!!-->
+
+					<ul class="navbar__list flex--container">
+						<li class="navbar__item">
+							<a class="navbar__link active" href="#home">Inicio</a>
+						</li>
+						<li class="navbar__item">
+							<a class="navbar__link" href="#about">Acerca de Mí</a>
+						</li>
+						<li class="navbar__item">
+							<a class="navbar__link" href="#skills">Habilidades</a>
+						</li>
+						<li class="navbar__item">
+							<a class="navbar__link" href="#projects">Portafolio</a>
+						</li>
+						<li class="navbar__item">
+							<a class="navbar__link" href="#contact">Contacto</a>
+						</li>
+					</ul>
+				</div>
+				<div class="navbar__toggles flex--container">
+					<div class="navbar__toggle--darkmode flex--container"> <!--!!!!!!! cambio NOCHE/DIA -->
+						<input
+							type="checkbox"
+							name="color-scheme"
+							id="darkmode-toggle"
+							class="navbar__toggle--darkmode-input"
+						/>
+						<label for="darkmode-toggle" class="navbar__toggle--darkmode-label">
+							<i class="bx bx-sun navbar__toggle--darkmode-sun"></i>
+							<i class="bx bx-moon navbar__toggle--darkmode-moon"></i>
+						</label>
+					</div>
+					<div class="navbar__toggle--language flex--container"> <!--!!!!!!! cambio IDIOMA -->
+						<input
+							type="checkbox"
+							id="language-toggle"
+							class="navbar__toggle--language-input "
+						/>
+						<label
+							for="language-toggle"
+							class="navbar__toggle--language-label "
+						></label>
+					</div>
+				</div>
+				<a href="#nav"><i class="bx bx-menu btn__open navbar__icon"></i></a> <!--!!!!!!!!!! ?-->
+			</nav>
+		</header>
+
+		<main>
+			<section id="home" class="home">
+
+				<div class="home__container grid--container">
+					<div class="home__image">
+						<img
+							src="assets/img/profile.png"
+							alt="profile photo"
+							title="Pablo Silva"
+						/>
+					</div>
+
+					<ul class="home__social flex--container">
+						<li class="home__social-item">
+							<a class="home__social-link" href="https://www.linkedin.com/in/pablo-silva-salazar/" target="_blank"
+								><i class="bx bxl-linkedin"></i
+							></a>
+						</li>
+						<li class="home__social-item">
+							<a class="home__social-link" href="https://wa.me/+51994863503" target="_blank"
+								><i class="bx bxl-whatsapp"></i
+							></a>
+						</li>
+						<li class="home__social-item">
+							<a class="home__social-link" href="https://github.com/pabloss22222?tab=packages" target="_blank"
+								><i class="bx bxl-github"></i
+							></a>
+						</li>
+						<li class="home__social-item">
+							<a class="home__social-link" href="mailto: pabloss22222@gmail.com" target="_blank"
+								><i class="bx bx-envelope"></i
+							></a>
+						</li>
+					</ul>
+
+					<div class="home__info">
+						<h1 class="home__title">Hola, soy Pablo</h1>
+
+						<p class="home__description">
+							Desarrollador web, apasionado por la tecnología y la
+							programación.
+						</p>
+					</div>
+
+					<div class="home__buttons">
+						<a
+							class="btn btn--primary"
+							href="assets\cv\Pablo_Silva_Salazar_CV.pdf"
+							title="Descargar mi CV"
+							download="my_cv"
+							rel="noreferrer nofollow"
+						>
+							Descargar CV
+						</a>
+					</div>
+				</div>
+			</section>
+			<section id="about" class="about section">
+
+				<script>
+					window.addEventListener('scroll', () => {
+					  const aboutSection = document.querySelector('#about');
+					  const windowHeight = window.innerHeight;
+					  const sectionTop = aboutSection.getBoundingClientRect().top;
+				  
+					  if (sectionTop < windowHeight / 2) {
+						aboutSection.setAttribute('transition-style', 'in:wipe:right');
+					  } else {
+						aboutSection.removeAttribute('transition-style');
+					  }
+					});
+				</script>
+				<script>
+					let lastScrollTop = 0;
+				  
+					window.addEventListener('scroll', () => {
+					  const aboutSection = document.querySelector('#about');
+					  const windowHeight = window.innerHeight;
+					  const sectionTop = aboutSection.getBoundingClientRect().top;
+					  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+				  
+					  if (scrollTop > lastScrollTop) {
+						// Scroll hacia abajo
+						if (sectionTop < windowHeight / 2) {
+						  aboutSection.setAttribute('transition-style', 'in:wipe:right');
+						} else {
+						  aboutSection.removeAttribute('transition-style');
+						}
+					  } else {
+						// Scroll hacia arriba
+						aboutSection.setAttribute('transition-style', 'in:wipe:right');
+					  }
+				  
+					  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+					});
+				  </script>
+				<h2 class="section__title">Acerca de Mí</h2>
+
+				<div class="about__container grid--container">
+					
+					<p class="about__description">
+						Soy Bachiller en Ingeniería Electrónica, una carrera que me ha brindado la oportunidad de explorar
+						 distintos campos de la tecnología, incluido el desarrollo de software mediante la creación de 
+						 aplicaciones web y de escritorio. Fuera del ámbito de la programación, es probable encontrarme en una
+						  cancha de fútbol realizando mi deporte favorito o disfrutando de los últimos éxitos en un karaoke. 
+					</p>
+
+					<div class="about__cards flex--container">
+						<!--Card 1 -->
+						<div class="about__card">
+							<img
+								class="about__card--img"
+								src="assets/img/me_2.jpeg"
+								alt="Laborando como ingeniero"
+								title="Laborando como ingeniero"
+							/>
+						</div>
+						<!--Card 2 -->
+						<div class="about__card">
+							<img
+								class="about__card--img"
+								src="assets\img\me_1.jpg"
+								alt="Trabajando en equipo"
+								title="Trabajando en equipo"
+							/>
+						</div>
+						<!--Card 3 -->
+						<div class="about__card">
+							<img
+								class="about__card--img"
+								src="assets/img/me_3.jpeg"
+								alt="Tiempo de relax"
+								title="Tiempo de relax"
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="skills" class="skills section">
+				<script>
+					window.addEventListener('scroll', () => {
+					  const aboutSection = document.querySelector('#skills');
+					  const windowHeight = window.innerHeight;
+					  const sectionTop = aboutSection.getBoundingClientRect().top;
+				  
+					  if (sectionTop < windowHeight / 2) {
+						aboutSection.setAttribute('transition-style', 'in:wipe:left');
+					  } else {
+						aboutSection.removeAttribute('transition-style');
+					  }
+					});
+				</script>
+				<h2 class="section__title">Habilidades</h2>
+
+				<div class="skills__container grid--container">
+					<p class="skills__description flex--container">
+						Actitud proactiva hacia el aprendizaje continuo de nuevas tecnologías y metodologías para mantenerse actualizado en el campo del desarrollo y diseño web.
+						Capacidad para colaborar eficientemente en equipos multidisciplinarios, comunicando ideas y resolviendo problemas de manera conjunta.
+
+					<div class="skills__wrapper flex--container">
+						<div class="skills__cards flex--container">
+							<!--Card 1 -->
+							<details class="skills__cards-container" name="moreInfo" open>
+								<summary class="skills__cards-title flex--container">
+									<i class="bx bxl-javascript flex--container"></i>
+								</summary>
+								
+								<summary class="skills__cards-title flex--container">
+									<i class="bx bxl-html5 flex--container"></i>
+									<i class="bx bxl-css3 flex--container"></i>
+									<i class='bx bxl-typescript' ></i>
+									<i class='bx bxl-java'></i>
+								</summary>
+								<div class="skills__card-container">
+									<h3 class="skills__card-title"> Lenguajes</h3>
+
+									<p class="skills__card-description">
+
+										Conocimientos en los lenguajes más usados en el mercado actual utilizando librerías como react, node y spring. 
+
+									</p>
+								</div>
+
+							</details>
+							<!--Card 2 -->
+							<details class="skills__cards-container" name="moreInfo">
+								<summary class="skills__cards-title flex--container">
+									<i class='bx bx-grid' ></i>
+								</summary>
+								<div class="skills__card-container">
+									<h3 class="skills__card-title">Diseño responsivo</h3>
+
+									<p class="skills__card-description">
+										Capacidad para crear interfaces que se adaptan a diferentes dispositivos y tamaños de pantalla.
+
+									</p>
+								</div>
+							</details>
+							<!--Card 3 -->
+							<details class="skills__cards-container" name="moreInfo">
+								<summary class="skills__cards-title flex--container">
+									 
+									<i class='bx bxl-spring-boot'></i>
+								</summary>
+								<div class="skills__card-container">
+									<h3 class="skills__card-title">Frameworks</h3>
+
+									<p class="skills__card-description">
+										Experiencia en desarrollo backend utilizando Node.js y SpringBoot utilizando el modelo de capas.
+
+									</p>
+								</div>
+							</details>
+							<!--Card 4 -->
+							<details class="skills__cards-container" name="moreInfo">
+								<summary class="skills__cards-title flex--container">
+									<i class="bx bxl-react flex--container"></i>
+								</summary>
+								<div class="skills__card-container">
+									<h3 class="skills__card-title">Librerias</h3>
+									<p class="skills__card-description">
+										Manejo de librerias como react, node o tkinder para el desarrollo de aplicaciones web y de escritorio 
+									</p>
+								</div>
+							</details>
+						</div>
+					</div>
+					<div class="skills__tags flex--container">
+						<h3 class="skills__tags-title">Habilidades Blandas</h3>
+						<div class="skills__tags-container flex--container">
+							<span class="skills__tag">Responsable</span>
+							<span class="skills__tag">Trabajo en equipo</span>
+							<span class="skills__tag">Creativo</span>
+							<span class="skills__tag">Puntual</span>
+							<span class="skills__tag">Proactivo</span>
+							<span class="skills__tag">Autodidacta</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="projects" class="projects section">
+				<script>
+					window.addEventListener('scroll', () => {
+					  const aboutSection = document.querySelector('#projects');
+					  const windowHeight = window.innerHeight;
+					  const sectionTop = aboutSection.getBoundingClientRect().top;
+				  
+					  if (sectionTop < windowHeight / 2) {
+						aboutSection.setAttribute('transition-style', 'in:wipe:right');
+					  } else {
+						aboutSection.removeAttribute('transition-style');
+					  }
+					});
+				</script>
+				<h2 class="section__title">Proyectos</h2>
+
+				<div class="projects__container grid--container">
+					<div class="projects__project">
+						<div class="projects__inner grid--container">
+							<div class="projects__image">
+								<img class="projects__image--1"
+									src="assets/img/project1.jpg"
+									alt="project 1"
+									title="Ecommerce Vanilla"
+								/>
+							</div>
+
+							<div class="projects__info">
+								<h3 class="projects__name">Api-rest-NestJS</h3>
+								<p class="projects__description">
+									Demo de una Api-rest para realizar peticiones CRUD utilizando el modelo de capas y una base de datos en memoria.
+								</p>
+
+								<div class="projects__buttons">
+									<button class="btn projects__button" type="button">
+										VER DEMO
+									</button>
+									<button class="btn projects__button" type="button">
+										VER CÓDIGO
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="projects__project">
+						<div class="projects__inner grid--container">
+							<div class="projects__image projects__image--2">
+								<img 
+									src="assets/img/project2.JPG"
+									alt="project 1"
+									title="Consumiendo API Pokemon con React"
+								/>
+							</div>
+
+							<div class="projects__info">
+								<h3 class="projects__name">PG-Logger </h3>
+								<p class="projects__description">
+									Aplicación realizada en Python utilizando la libreria Tkinder para la configuración de un datalogger. Esta aplicación escribe 
+									los datos de configuración en la memoria microSD del dispositivo para que puedan ser leídos por el mismo.
+								</p>
+
+								<div class="projects__buttons">
+									<button class="btn projects__button" type="button">
+										VER DEMO
+									</button>
+									<button class="btn projects__button" type="button">
+										VER CÓDIGO
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+
+				</div>
+			</section>
+			<section id="contact" class="contact section">
+				<script>
+					window.addEventListener('scroll', () => {
+					  const aboutSection = document.querySelector('#contact');
+					  const windowHeight = window.innerHeight;
+					  const sectionTop = aboutSection.getBoundingClientRect().top;
+				  
+					  if (sectionTop < windowHeight / 2) {
+						aboutSection.setAttribute('transition-style', 'in:wipe:left');
+					  } else {
+						aboutSection.removeAttribute('transition-style');
+					  }
+					});
+				</script>
+				<h2 class="section__title">Contacto</h2>
+
+				<div class="contact__container grid--container">
+					<div class="contact__info">
+						<h3 class="contact__info-title">Información de contacto</h3>
+						<p class="contact__info-description">
+							Déjame saber lo que nececitas !
+						</p>
+
+						<address class="contact__info-data">
+							<div class="contact__info-item">
+								<i class="bx bxl-whatsapp"></i>
+
+								<span class="contact__info-number">
+									<a
+										href="https://wa.me/+51994863503?text=Tu%20Mensaje%20De%20Texto"
+										target="_blank"
+										rel="noreferrer nofollow"
+										>Enviar mensaje a WhatsApp</a
+									>
+								</span>
+							</div>
+
+							<div class="contact__info-item">
+								<i class="bx bx-phone"></i>
+
+								<span class="contact__info-number">
+									<a
+										href="tel:"
+										target="_blank"
+										rel="noreferrer nofollow"
+									>
+										+51994863503
+									</a>
+								</span>
+							</div>
+
+							<div class="contact__info-item">
+								<i class="bx bxs-envelope"></i>
+
+								<span class="contact__info-mail">
+									<a
+										id="mail"
+										href="mailto:pabloss22222@gmail.com"
+										target="_blank"
+										rel="noreferrer nofollow"
+									>
+										pabloss22222@gmail.com
+									</a>
+								</span>
+							</div>
+
+							<div class="contact__info-item">
+								<i class="bx bx-map"></i>
+
+								<span class="contact__info-map"> Bogotá, Colombia. </span>
+							</div>
+						</address>
+					</div>
+					<div class="contact__form">
+						<h3 class="contact__form-title">Enviar mensaje</h3>
+						<form id="form" class="contact__form-container">
+							<div class="contact__form-group">
+								<label for="name" class="contact__form-label">Nombre</label>
+								<input
+									type="text"
+									id="name"
+									name="name"
+									class="contact__form-input"
+								/>
+							</div>
+
+							<div class="contact__form-group">
+								<label for="email" class="contact__form-label">Correo</label>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									class="contact__form-input"
+								/>
+							</div>
+
+							<div class="contact__form-group">
+								<label for="subject" class="contact__form-label">Asunto</label>
+								<input
+									type="text"
+									id="subject"
+									name="subject"
+									class="contact__form-input"
+								/>
+							</div>
+
+							<div class="contact__form-group">
+								<label for="message" class="contact__form-label">Mensaje</label>
+								<textarea
+									id="message"
+									name="message"
+									cols="30"
+									rows="10"
+									class="contact__form-input"
+								></textarea>
+							</div>
+							<dialog id="modal">
+								Formulario enviado con éxito!
+								<button type="reset" id="btn_close-modal">Cerrar</button>
+							</dialog>
+
+							<button type="submit" class="btn contact__form-button">
+								Enviar
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer section">
+			<script>
+				window.addEventListener('scroll', () => {
+				  const aboutSection = document.querySelector('#footer');
+				  const windowHeight = window.innerHeight;
+				  const sectionTop = aboutSection.getBoundingClientRect().top;
+			  
+				  if (sectionTop < windowHeight / 2) {
+					aboutSection.setAttribute('transition-style', 'in:wipe:right');
+				  } else {
+					aboutSection.removeAttribute('transition-style');
+				  }
+				});
+			</script>
+			
+			<div class="footer__container grid--container">
+				<div class="footer__info">
+					<h3 class="footer__title">Pablo Silva</h3>
+					<p class="footer__description">
+						Soy desarrollador web, apasionado por la tecnología y la
+						programación.
+					</p>
+				</div>
+
+				<div class="footer__social">
+					<h3 class="footer__title">Redes Sociales</h3>
+					
+
+					<ul class="footer__social-list">
+						<li class="footer__social-item">
+							<a
+								class="footer__social-link"
+								href="https://www.linkedin.com/in/pablo-silva-salazar/"
+								target="_blank"
+								rel="noreferrer nofollow"
+								><i class="bx bxl-facebook"></i
+							></a>
+						</li>
+
+						<li class="footer__social-item">
+							<a
+								class="footer__social-link"
+								href="https://www.linkedin.com/in/pablo-silva-salazar/"
+								target="_blank"
+								rel="noreferrer nofollow"
+								><i class="bx bxl-instagram"></i
+							></a>
+						</li>
+
+						<li class="footer__social-item">
+							<a
+								class="footer__social-link"
+								href="https://www.linkedin.com/in/pablo-silva-salazar/"
+								target="_blank"
+								rel="noreferrer nofollow"
+								><i class="bx bxl-twitter"></i
+							></a>
+						</li>
+
+						<li class="footer__social-item">
+							<a
+								class="footer__social-link"
+								href="https://www.linkedin.com/in/pablo-silva-salazar/"
+								target="_blank"
+								rel="noreferrer nofollow"
+								><i class="bx bxl-linkedin"></i
+							></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<p class="footer__copy"></p>
+		</footer>
+	</body>
+</html>
